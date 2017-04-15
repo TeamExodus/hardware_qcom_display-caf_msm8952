@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE                  := libsdmcore
 LOCAL_MODULE_TAGS             := optional
-LOCAL_C_INCLUDES              := hardware/qcom/display/sdm/include/ \
+LOCAL_C_INCLUDES              := hardware/qcom/${TARGET_QCOM_DISPLAY_VARIANT}/sdm/include/ \
                                  $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_CFLAGS                  := -Wno-missing-field-initializers -Wno-unused-parameter \
                                  -Wconversion -Wall -Werror \

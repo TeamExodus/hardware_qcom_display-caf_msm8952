@@ -13,6 +13,8 @@
 # limitations under the License.
 
 LOCAL_PATH:= $(call my-dir)
+
+ifeq ($(call TARGET_QCOM_DEFAULT_LIGLIGHT_DEFAULT,TRUE),true)
 # HAL module implemenation stored in
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
@@ -25,3 +27,4 @@ LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+endif
